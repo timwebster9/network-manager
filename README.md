@@ -1,4 +1,4 @@
-node-ejs
+network-manager
 ========
 
-Using EJS to template a Node application.
+Use node.js to manage computers on a network
