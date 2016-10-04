@@ -11,11 +11,8 @@
 
 	<main>
 		<div class="jumbotron">
-			<h1>This is great</h1>
-			<p>Welcome to templating using EJS</p>
-                        <h2>Variable</h2>
-                        <p><%= tagline %></p>
-                        <h2>Loop</h2>
+			<h1>Network Manager</h1>
+                        <h2>Current Status</h2>
                         <ul>
                           <% machines.forEach(function(machine) { %>
                             <li><%= machine.name %> - <%= machine.status %></li>
