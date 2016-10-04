@@ -8,20 +8,38 @@ app.set('view engine', 'ejs');
 // index page 
 app.get('/', function(req, res) {
 
-  tools.test('venus');
+  tools.test('venus', function(status) {
 
-  var drinks = [
-    { name: 'Bloody Mary', drunkness: 3 },
-    { name: 'Martini', drunkness: 5 },
-    { name: 'Scotch', drunkness: 10 }
-  ];
+    console.log('status: ' + status);
+    var venusStatus = status;
+    console.log('venusStatus: ' + status);
 
-  var tagline = "Any code of your own that you haven't looked at for six or more months might as well have been written by someone else.";
+    var machines = [
+      { name: 'Venus', status: venusStatus }
+    //  { name: 'Mars', status: marsStatus }
+    //  { name: 'Martini', drunkness: 5 },
+    //  { name: 'Scotch', drunkness: 10 }
+    ];
 
-  res.render('pages/index', {
-      drinks: drinks,
+    var tagline = "Any code of your own that you haven't looked at for six or more months might as well have been written by someone else.";
+
+    res.render('pages/index', {
+      machines: machines,
       tagline: tagline
+    });
+
+    
   });
+
+    //console.log('status: ' + venusStatus);
+
+ // var drinks = [
+ //   { name: 'Venus', status: venusStatus },
+ //   { name: 'Martini', drunkness: 5 },
+ //   { name: 'Scotch', drunkness: 10 }
+ // ];
+
+ 
 });
 
 // about page 

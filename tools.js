@@ -32,13 +32,16 @@ module.exports = {
     );
   },
 
-  test: function (host) {
-    this.ping(host, function(id) {
-      console.log(host + ' is ' + id);
-      if (id == 'up') {
-        shutdown(host)
-      }
-    });
+  test: function (host, cb) {
+    this.ping(host, cb);
+
+  //test: function (host) {
+  //  this.ping(host, function(id) {
+  //    console.log(host + ' is ' + id);
+  //    if (id == 'up') {
+  //      shutdown(host)
+  //    }
+  //  });
   }
 };
 
