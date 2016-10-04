@@ -1,14 +1,14 @@
-// load the things we need
 var express = require('express');
 var app = express();
 
-// set the view engine to ejs
-app.set('view engine', 'ejs');
+var tools = require('./tools');
 
-// use res.render to load up an ejs view file
+app.set('view engine', 'ejs');
 
 // index page 
 app.get('/', function(req, res) {
+
+  tools.test('venus');
 
   var drinks = [
     { name: 'Bloody Mary', drunkness: 3 },
